@@ -11,7 +11,21 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{7E
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Web", "Web", "{C5216BAA-08EA-4AB2-B463-61F2FFD6D16F}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Identidade", "Identidade", "{FA45C8F2-3F11-4A9B-9255-6F8D98159553}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NSE.Identidade.API", "src\services\NSE.Identidade.API\NSE.Identidade.API.csproj", "{808DB366-97BE-4895-B0D6-1C3BA0F4F059}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{808DB366-97BE-4895-B0D6-1C3BA0F4F059}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{808DB366-97BE-4895-B0D6-1C3BA0F4F059}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{808DB366-97BE-4895-B0D6-1C3BA0F4F059}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{808DB366-97BE-4895-B0D6-1C3BA0F4F059}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
@@ -19,6 +33,8 @@ Global
 		{8FC94FA0-DF2B-4BB3-9B80-1FF8AA76ECBE} = {E8A64ED1-D613-4774-8DCD-0998DE3EFDA8}
 		{7E6C35D2-0F9F-43F9-864F-01C003FD7DAE} = {E8A64ED1-D613-4774-8DCD-0998DE3EFDA8}
 		{C5216BAA-08EA-4AB2-B463-61F2FFD6D16F} = {E8A64ED1-D613-4774-8DCD-0998DE3EFDA8}
+		{FA45C8F2-3F11-4A9B-9255-6F8D98159553} = {7E6C35D2-0F9F-43F9-864F-01C003FD7DAE}
+		{808DB366-97BE-4895-B0D6-1C3BA0F4F059} = {FA45C8F2-3F11-4A9B-9255-6F8D98159553}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {F605F263-82E8-4B8A-BFE2-70DEB3681A2B}
