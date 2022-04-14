@@ -19,9 +19,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="Configuration\" />
     <Folder Include="Models\" />
     <Folder Include="Extensions\" />
-    <Folder Include="Configuration\" />
   </ItemGroup>
 
 
