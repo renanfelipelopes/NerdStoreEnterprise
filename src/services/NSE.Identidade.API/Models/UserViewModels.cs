@@ -2,7 +2,7 @@
 
 namespace NSE.Identidade.API.Models
 {
-    public class UserViewModels
+    public class UsuarioRegistro
     {
         [Required(ErrorMessage = "O campo {0} é obrigatório")]
         [EmailAddress(ErrorMessage = "O campo {0} está em formato inválido")]
