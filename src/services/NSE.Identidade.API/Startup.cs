@@ -1,18 +1,13 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
-using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
 using NSE.Identidade.API.Data;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace NSE.Identidade.API
 {
@@ -31,6 +26,11 @@ namespace NSE.Identidade.API
             services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
 
+            services.AddDefaultIdentity<IdentityUser>()
+              .AddRoles<IdentityRole>()
+              .AddEntityFrameworkStores<ApplicationDbContext>()
+              .AddDefaultTokenProviders();
+
             services.AddControllers();
 
             services.AddSwaggerGen(c =>
@@ -40,7 +40,7 @@ namespace NSE.Identidade.API
                     Title = "NerdStore Enterprise Identity API",
                     Description = "Esta API faz parte do curso ASP.NET Core Enterprise Application.",
                     Contact = new OpenApiContact() { Name = "Renan Lopes", Email = "renanlopes.dq@gmail.com" },
-                    License = new OpenApiLicense() { Name = "MIT", Url = Uri("https://opensource.org/licenses/MIT") }
+                    License = new OpenApiLicense() { Name = "MIT", Url = new Uri("https://opensource.org/licenses/MIT") }
                 });
             });
         }
@@ -51,7 +51,7 @@ namespace NSE.Identidade.API
             app.UseSwagger();
             app.UseSwaggerUI(c =>
             {
-                c.SwaggerEndpoint("/swagger/v1/swagger.json", "V1");
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "v1");
             });
 
             if (env.IsDevelopment())
@@ -63,6 +63,7 @@ namespace NSE.Identidade.API
 
             app.UseRouting();
 
+            app.UseAuthentication();
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
