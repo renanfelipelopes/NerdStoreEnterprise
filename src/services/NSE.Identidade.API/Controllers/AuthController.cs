@@ -57,5 +57,3 @@ namespace NSE.Identidade.API.Controllers
         }
     }
 }
-
-,
