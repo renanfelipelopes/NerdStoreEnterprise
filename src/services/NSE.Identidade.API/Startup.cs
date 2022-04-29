@@ -6,9 +6,11 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using NSE.Identidade.API.Data;
 using System;
+using System.Text;
 
 namespace NSE.Identidade.API
 {
@@ -36,7 +38,21 @@ namespace NSE.Identidade.API
             {
                 options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
                 options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+            }).AddJwtBearer(bearerOptions =>
+            {
+                bearerOptions.RequireHttpsMetadata = true;
+                bearerOptions.SaveToken = true;
+                bearerOptions.TokenValidationParameters = new TokenValidationParameters
+                {
+                    ValidateIssuerSigningKey = true,
+                    IssuerSigningKey = new SymmetricSecurityKey(Encoding.ASCII.GetBytes("x")),
+                    ValidateIssuer = true,
+                    ValidateAudience = true,
+                    ValidAudience = "x",
+                    ValidIssuer = "x"
+                };
             });
+
 
             services.AddControllers();
 
