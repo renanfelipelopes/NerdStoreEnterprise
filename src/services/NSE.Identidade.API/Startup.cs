@@ -6,6 +6,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.IdentityModel.Logging;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using NSE.Identidade.API.Data;
@@ -35,7 +36,7 @@ namespace NSE.Identidade.API
               .AddEntityFrameworkStores<ApplicationDbContext>()
               .AddDefaultTokenProviders();
 
-            var appSettingsSection = Configuration.GetSection("AppSettings"); ;
+            var appSettingsSection = Configuration.GetSection("AppSettings");
             services.Configure<AppSettings>(appSettingsSection);
 
             var appSettings = appSettingsSection.Get<AppSettings>();
@@ -59,6 +60,8 @@ namespace NSE.Identidade.API
                     ValidIssuer = appSettings.Emissor
                 };
             });
+
+            IdentityModelEventSource.ShowPII = true;
 
             services.AddControllers();
 
