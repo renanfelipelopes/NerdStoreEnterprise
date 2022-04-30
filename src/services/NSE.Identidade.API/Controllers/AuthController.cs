@@ -56,5 +56,10 @@ namespace NSE.Identidade.API.Controllers
 
             return BadRequest();
         }
+
+        public async Task<UsuarioRespostaLogin> GerarToken(string email)
+        {
+
+        }
     }
 }
