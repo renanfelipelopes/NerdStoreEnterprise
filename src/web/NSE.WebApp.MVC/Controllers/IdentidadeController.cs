@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace NSE.WebApp.MVC.Controllers
 {
-    public class IdentidadeController : Controller
+    public class IdentidadeController : MainController
     {
         private readonly IAutenticacaoService _autenticacaoService;
 
@@ -47,7 +47,7 @@ namespace NSE.WebApp.MVC.Controllers
             return View();
         }
 
-        [HttpGet]
+        [HttpPost]
         [Route("login")]
         public async Task<IActionResult> Login(UsuarioLogin usuarioLogin)
         {
