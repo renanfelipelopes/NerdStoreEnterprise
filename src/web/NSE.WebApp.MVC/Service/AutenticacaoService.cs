@@ -25,7 +25,7 @@ namespace NSE.WebApp.MVC.Service
                 Encoding.UTF8,
                 "application/json");
 
-            var response = await _httpClient.PostAsync("https://localhost:44320​/api​/identidade​/autenticar", loginContent);
+            var response = await _httpClient.PostAsync("/api/identidade/autenticar", loginContent);
 
             var options = new JsonSerializerOptions
             {
