@@ -10,6 +10,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using NSE.Catalogo.API.Data;
+using Microsoft.EntityFrameworkCore;
 
 namespace NSE.Catalogo.API
 {
@@ -25,6 +27,9 @@ namespace NSE.Catalogo.API
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddDbContext<CatalogoContext>(options => 
+                options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+
             services.AddControllers();
         }
 
