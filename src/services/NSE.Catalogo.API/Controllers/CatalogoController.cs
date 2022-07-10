@@ -27,6 +27,5 @@ namespace NSE.Catalogo.API.Controllers
         {
             return await _produtoRepository.ObterPorId(id);
         }
-
     }
 }
