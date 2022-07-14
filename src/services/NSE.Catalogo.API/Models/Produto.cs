@@ -1,5 +1,5 @@
-﻿using NSE.Core.DomainObjects;
-using System;
+﻿using System;
+using NSE.Core.DomainObjects;
 
 namespace NSE.Catalogo.API.Models
 {
