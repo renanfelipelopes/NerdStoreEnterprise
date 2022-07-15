@@ -1,7 +1,7 @@
 ﻿using System.Threading.Tasks;
 using NSE.WebApp.MVC.Models;
 
-namespace NSE.WebApp.MVC.Services
+namespace NSE.WebApp.MVC.Services.Interfaces
 {
     public interface IAutenticacaoService
     {
