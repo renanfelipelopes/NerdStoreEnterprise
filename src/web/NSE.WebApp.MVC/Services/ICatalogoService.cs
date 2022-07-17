@@ -4,7 +4,7 @@ using System.Threading.Tasks;
 using NSE.WebApp.MVC.Models;
 using Refit;
 
-namespace NSE.WebApp.MVC.Services.Interfaces
+namespace NSE.WebApp.MVC.Services
 {
     public interface ICatalogoService
     {
