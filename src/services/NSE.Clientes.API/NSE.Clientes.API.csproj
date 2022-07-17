@@ -32,7 +32,6 @@
     <Folder Include="Application\Events\" />
     <Folder Include="Application\Queries\" />
     <Folder Include="Controllers\" />
-    <Folder Include="Data\Repository\" />
     <Folder Include="Services\" />
   </ItemGroup>
 
