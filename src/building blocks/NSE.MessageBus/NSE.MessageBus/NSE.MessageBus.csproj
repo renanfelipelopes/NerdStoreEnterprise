@@ -6,6 +6,7 @@
 
   <ItemGroup>
     <PackageReference Include="easynetq" Version="6.5.2" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="6.0.0" />
     <PackageReference Include="polly" Version="7.2.3" />
   </ItemGroup>
 
