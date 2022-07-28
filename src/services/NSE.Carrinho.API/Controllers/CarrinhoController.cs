@@ -7,6 +7,7 @@ using Microsoft.EntityFrameworkCore;
 using NSE.Carrinho.API.Data;
 using NSE.Carrinho.API.Model;
 using NSE.WebAPI.Core.Controllers;
+using NSE.WebAPI.Core.Usuario;
 using NSE.WebApp.MVC.Extensions;
 
 namespace NSE.Carrinho.API.Controllers
@@ -14,7 +15,7 @@ namespace NSE.Carrinho.API.Controllers
     [Authorize]
     public class CarrinhoController : MainController
     {
-        private readonly AspNetUser _user;
+        private readonly IAspNetUser _user;
         private readonly CarrinhoContext _context;
 
         public CarrinhoController(IAspNetUser user, CarrinhoContext context)
