@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.29920.165
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32407.343
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{CE59F6FC-1501-4E25-814A-52B0E0C677C7}"
 EndProject
@@ -49,7 +49,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NSE.WebAPI.Core", "src\buil
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MessageBus", "MessageBus", "{99AB4AF0-CDF2-4D8B-94AC-03B210B47E60}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NSE.MessageBus", "src\building blocks\NSE.MessageBus\NSE.MessageBus.csproj", "{9BC437B3-3CE2-455B-9E4E-30BA2955E116}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NSE.MessageBus", "src\building blocks\NSE.MessageBus\NSE.MessageBus.csproj", "{9BC437B3-3CE2-455B-9E4E-30BA2955E116}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ApiGateways", "ApiGateways", "{DF9FA8DB-2907-41C5-A8ED-AB84E4685663}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Compras", "Compras", "{7BDF4625-CF54-4463-9B88-83818F6794E7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NSE.Bff.Compras", "src\api gateways\NSE.Bff.Compras\NSE.Bff.Compras.csproj", "{4AA8E994-02CD-416B-9863-627FB3E0EB64}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -97,6 +103,10 @@ Global
 		{9BC437B3-3CE2-455B-9E4E-30BA2955E116}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9BC437B3-3CE2-455B-9E4E-30BA2955E116}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9BC437B3-3CE2-455B-9E4E-30BA2955E116}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4AA8E994-02CD-416B-9863-627FB3E0EB64}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4AA8E994-02CD-416B-9863-627FB3E0EB64}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4AA8E994-02CD-416B-9863-627FB3E0EB64}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4AA8E994-02CD-416B-9863-627FB3E0EB64}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -125,6 +135,9 @@ Global
 		{FD20E369-FC17-48F1-BA94-2BDB9ED9EE2F} = {60924242-29A8-4198-81FB-7F9705A6B2C1}
 		{99AB4AF0-CDF2-4D8B-94AC-03B210B47E60} = {117A9589-2568-4766-8D6F-6A5E1F0E5C42}
 		{9BC437B3-3CE2-455B-9E4E-30BA2955E116} = {99AB4AF0-CDF2-4D8B-94AC-03B210B47E60}
+		{DF9FA8DB-2907-41C5-A8ED-AB84E4685663} = {CE59F6FC-1501-4E25-814A-52B0E0C677C7}
+		{7BDF4625-CF54-4463-9B88-83818F6794E7} = {DF9FA8DB-2907-41C5-A8ED-AB84E4685663}
+		{4AA8E994-02CD-416B-9863-627FB3E0EB64} = {7BDF4625-CF54-4463-9B88-83818F6794E7}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {5636683D-9745-4645-8DF8-3834F35F791B}
