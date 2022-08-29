@@ -61,6 +61,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NSE.Pedidos.Domain", "src\s
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NSE.Pedidos.Infra", "src\services\NSE.Pedidos.Infra\NSE.Pedidos.Infra.csproj", "{B897239E-2D79-4C2C-B1F3-5A7DC608CD6C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NSE.Pagamentos.NerdsPag", "NSE.Pagamentos.NerdsPag\NSE.Pagamentos.NerdsPag.csproj", "{F35E6AF7-29B7-437D-88AB-9CCED6F2C520}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -119,6 +121,10 @@ Global
 		{B897239E-2D79-4C2C-B1F3-5A7DC608CD6C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B897239E-2D79-4C2C-B1F3-5A7DC608CD6C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B897239E-2D79-4C2C-B1F3-5A7DC608CD6C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F35E6AF7-29B7-437D-88AB-9CCED6F2C520}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F35E6AF7-29B7-437D-88AB-9CCED6F2C520}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F35E6AF7-29B7-437D-88AB-9CCED6F2C520}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F35E6AF7-29B7-437D-88AB-9CCED6F2C520}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -152,6 +158,7 @@ Global
 		{4AA8E994-02CD-416B-9863-627FB3E0EB64} = {7BDF4625-CF54-4463-9B88-83818F6794E7}
 		{6BEF721F-951E-47CF-A926-DFA6C6795865} = {D677DC3B-F746-4A12-8C71-41BAAB2BDDF8}
 		{B897239E-2D79-4C2C-B1F3-5A7DC608CD6C} = {D677DC3B-F746-4A12-8C71-41BAAB2BDDF8}
+		{F35E6AF7-29B7-437D-88AB-9CCED6F2C520} = {003AF41A-DE6D-4E10-BFB2-B17DFFAA96CF}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {5636683D-9745-4645-8DF8-3834F35F791B}
