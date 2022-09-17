@@ -1,18 +1,11 @@
-﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
-    <UserSecretsId>2c7796f7-01cb-4717-908e-d3619cc8226f</UserSecretsId>
+    <UserSecretsId>f3b781d5-30b2-4c41-af65-5f4de74d504d</UserSecretsId>
     <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
     <DockerfileContext>..\..\..</DockerfileContext>
   </PropertyGroup>
-
-  <ItemGroup>
-    <Compile Remove="Controller\**" />
-    <Content Remove="Controller\**" />
-    <EmbeddedResource Remove="Controller\**" />
-    <None Remove="Controller\**" />
-  </ItemGroup>
 
 	<ItemGroup>
 		<PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.10.8" />
@@ -24,6 +17,10 @@
 		<ProjectReference Include="..\..\building blocks\NSE.Core\NSE.Core.csproj" />
 		<ProjectReference Include="..\..\building blocks\NSE.MessageBus\NSE.MessageBus.csproj" />
 		<ProjectReference Include="..\..\building blocks\NSE.WebAPI.Core\NSE.WebAPI.Core.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Folder Include="Configuration\" />
 	</ItemGroup>
 
 </Project>

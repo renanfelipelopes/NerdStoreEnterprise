@@ -2,7 +2,6 @@
 using Microsoft.Extensions.DependencyInjection;
 using NSE.Carrinho.API.Data;
 using NSE.WebAPI.Core.Usuario;
-using NSE.WebApp.MVC.Extensions;
 
 namespace NSE.Carrinho.API.Configuration
 {

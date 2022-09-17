@@ -8,7 +8,6 @@ using NSE.Carrinho.API.Data;
 using NSE.Carrinho.API.Model;
 using NSE.WebAPI.Core.Controllers;
 using NSE.WebAPI.Core.Usuario;
-using NSE.WebApp.MVC.Extensions;
 
 namespace NSE.Carrinho.API.Controllers
 {
@@ -79,6 +78,20 @@ namespace NSE.Carrinho.API.Controllers
             carrinho.RemoverItem(itemCarrinho);
 
             _context.CarrinhoItens.Remove(itemCarrinho);
+            _context.CarrinhoCliente.Update(carrinho);
+
+            await PersistirDados();
+            return CustomResponse();
+        }
+
+        [HttpPost]
+        [Route("carrinho/aplicar-voucher")]
+        public async Task<IActionResult> AplicarVoucher(Voucher voucher)
+        {
+            var carrinho = await ObterCarrinhoCliente();
+
+            carrinho.AplicarVoucher(voucher);
+
             _context.CarrinhoCliente.Update(carrinho);
 
             await PersistirDados();

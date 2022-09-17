@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Threading.Tasks;
-using System.Transactions;
 using Microsoft.Extensions.Options;
 using NSE.Pagamentos.API.Models;
 using NSE.Pagamentos.Facade;

@@ -21,12 +21,13 @@ namespace NSE.Pedidos.API.Application.Commands
         private readonly IVoucherRepository _voucherRepository;
         private readonly IMessageBus _bus;
 
-        public PedidoCommandHandler(IVoucherRepository voucherRepository,
-                                    IPedidoRepository pedidoRepository,
+        public PedidoCommandHandler(IVoucherRepository voucherRepository, 
+                                    IPedidoRepository pedidoRepository, 
                                     IMessageBus bus)
         {
             _voucherRepository = voucherRepository;
             _pedidoRepository = pedidoRepository;
+            _bus = bus;
         }
 
         public async Task<ValidationResult> Handle(AdicionarPedidoCommand message, CancellationToken cancellationToken)
@@ -143,7 +144,7 @@ namespace NSE.Pedidos.API.Application.Commands
 
             var result = await _bus
                 .RequestAsync<PedidoIniciadoIntegrationEvent, ResponseMessage>(pedidoIniciado);
-
+            
             if (result.ValidationResult.IsValid) return true;
 
             foreach (var erro in result.ValidationResult.Errors)

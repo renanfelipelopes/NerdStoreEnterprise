@@ -17,7 +17,13 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="Views\Catalogo\" />
+    <Folder Include="Views\Pedido\" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\..\building blocks\NSE.Core\NSE.Core.csproj" />
+    <ProjectReference Include="..\..\building blocks\NSE.WebAPI.Core\NSE.WebAPI.Core.csproj" />
   </ItemGroup>
 
 </Project>
